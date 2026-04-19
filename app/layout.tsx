@@ -1,11 +1,20 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import AmbientGlow from '@/components/AmbientGlow';
+import Cursor from '@/components/Cursor';
 import { MARKETPLACE_URL, SITE_NAME, SITE_URL } from '@/lib/links';
 import './globals.css';
 
 const DESCRIPTION =
   'Annotate screenshots on your clipboard before pasting them into AI chats like Claude, Copilot, and Cursor. Blur sensitive parts, add numbered steps, and resize large images automatically.';
+
+const IS_PRODUCTION_DEPLOY =
+  (process.env.CONTEXT ?? 'production') === 'production';
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a0f',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -14,6 +23,9 @@ export const metadata: Metadata = {
     template: '%s · Snapmark',
   },
   description: DESCRIPTION,
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     'snapmark',
     'vscode extension',
@@ -37,7 +49,14 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: 'Snapmark — Annotate screenshots before pasting them into AI chats',
     description: DESCRIPTION,
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Snapmark' }],
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Snapmark — annotate clipboard screenshots before pasting into AI chats',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -45,10 +64,9 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: ['/og.png'],
   },
-  icons: {
-    icon: '/favicon.ico',
-  },
-  robots: { index: true, follow: true },
+  robots: IS_PRODUCTION_DEPLOY
+    ? { index: true, follow: true }
+    : { index: false, follow: false },
 };
 
 const jsonLd = {
@@ -74,7 +92,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <AmbientGlow />
+        {children}
+        <Cursor />
+      </body>
     </html>
   );
 }
