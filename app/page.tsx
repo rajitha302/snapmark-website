@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import WorksWith from '@/components/WorksWith';
+import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -11,9 +12,10 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <WorksWith />
         <Features />
         <HowItWorks />
-        <WorksWith />
+        <FinalCTA />
       </main>
       <Footer />
     </>

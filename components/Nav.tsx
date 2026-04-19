@@ -30,7 +30,7 @@ export default function Nav() {
             href={MARKETPLACE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md bg-[var(--color-accent)] px-3.5 py-1.5 text-sm font-medium text-white transition hover:bg-[var(--color-accent-hover)]"
+            className="btn-primary rounded-md px-3.5 py-1.5 text-sm font-semibold tracking-tight"
           >
             Install
           </a>
