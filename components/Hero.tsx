@@ -47,10 +47,17 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="mt-16 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-2 shadow-2xl shadow-black/40">
-          <div className="flex aspect-[16/9] items-center justify-center rounded-lg bg-[var(--color-bg)] text-sm text-[var(--color-fg-muted)]">
-            Screenshot of the Snapmark annotator goes here
-          </div>
+        <div className="mx-auto mt-16 max-w-lg rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-2 shadow-2xl shadow-black/40">
+          <video
+            src="/hero.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Snapmark annotating a screenshot with numbered callouts, arrows, and a blurred region"
+            className="aspect-[724/806] w-full rounded-lg bg-[var(--color-bg)] object-cover"
+          />
         </div>
       </div>
     </section>
