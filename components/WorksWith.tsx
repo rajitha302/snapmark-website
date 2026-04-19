@@ -13,7 +13,6 @@ const agents: Agent[] = [
   { name: 'Cursor', logo: '/logos/cursor.svg' },
   { name: 'OpenAI Codex', logo: '/logos/openai.svg' },
   { name: 'Gemini Code Assist', logo: '/logos/googlegemini.svg' },
-  { name: 'Continue', logo: '/logos/continue.png', whiten: true },
   { name: 'Cline', logo: '/logos/cline.svg' },
 ];
 
