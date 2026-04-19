@@ -3,6 +3,7 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import AmbientGlow from '@/components/AmbientGlow';
 import Cursor from '@/components/Cursor';
+import ProductHuntBadge from '@/components/ProductHuntBadge';
 import { MARKETPLACE_URL, SITE_NAME, SITE_URL } from '@/lib/links';
 import './globals.css';
 
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <AmbientGlow />
         {children}
+        <ProductHuntBadge />
         <Cursor />
       </body>
     </html>
