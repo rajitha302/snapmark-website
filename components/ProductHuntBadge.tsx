@@ -5,7 +5,7 @@ export default function ProductHuntBadge() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Leave a review for Snapmark on Product Hunt"
-      className="fixed bottom-4 right-4 z-40 hidden transition-opacity hover:opacity-90 sm:block"
+      className="fixed bottom-28 right-4 z-40 hidden transition-opacity hover:opacity-90 sm:block"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
