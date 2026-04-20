@@ -52,12 +52,12 @@ export default function Hero() {
         <div className="mx-auto w-full max-w-xl rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-2 shadow-2xl shadow-black/40 lg:mx-0">
           <video
             src="/media/hero.mp4"
-            poster="/media/hero-poster.jpg"
+            poster="/media/hero-poster.webp"
             autoPlay
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             aria-label="Snapmark annotating a screenshot with numbered callouts, arrows, and a blurred region"
             className="aspect-[724/806] w-full rounded-lg bg-[var(--color-bg)] object-cover"
           />

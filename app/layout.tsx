@@ -91,7 +91,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           rel="preload"
           as="image"
-          href="/media/hero-poster.jpg"
+          href="/media/hero-poster.webp"
+          type="image/webp"
           fetchPriority="high"
         />
         <script

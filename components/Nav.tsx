@@ -7,12 +7,13 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-2.5" aria-label="Snapmark home">
           <Image
-            src="/logo.png"
+            src="/media/nav-logo.png"
             alt=""
             width={28}
             height={28}
             className="rounded-md"
             priority
+            unoptimized
           />
           <span className="text-base font-semibold tracking-tight">Snapmark</span>
         </a>
