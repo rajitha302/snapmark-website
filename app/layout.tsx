@@ -68,6 +68,9 @@ export const metadata: Metadata = {
   robots: IS_PRODUCTION_DEPLOY
     ? { index: true, follow: true }
     : { index: false, follow: false },
+  verification: {
+    google: '0kLFsQAN6nkI0qvTBr-IK3kZXvTwz3k1uSMkbNKEXVo',
+  },
 };
 
 const jsonLd = {
