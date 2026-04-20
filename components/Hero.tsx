@@ -51,7 +51,8 @@ export default function Hero() {
 
         <div className="mx-auto w-full max-w-xl rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-2 shadow-2xl shadow-black/40 lg:mx-0">
           <video
-            src="/hero.mp4"
+            src="/media/hero.mp4"
+            poster="/media/hero-poster.jpg"
             autoPlay
             muted
             loop
