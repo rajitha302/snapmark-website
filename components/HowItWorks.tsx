@@ -24,7 +24,7 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            How it works
+            How Snapmark works
           </h2>
           <p className="mt-4 text-[var(--color-fg-muted)]">
             Snapmark never touches any agent&rsquo;s window. It lives in your clipboard.

@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Snapmark — Annotate screenshots before pasting them into AI chats',
+    default: 'Snapmark for VS Code — Annotate screenshots before pasting into AI chats',
     template: '%s · Snapmark',
   },
   description: DESCRIPTION,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Snapmark — Annotate screenshots before pasting them into AI chats',
+    title: 'Snapmark for VS Code — Annotate screenshots before pasting into AI chats',
     description: DESCRIPTION,
     images: [
       {
