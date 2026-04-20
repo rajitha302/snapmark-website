@@ -74,7 +74,7 @@ export default function ForCopilot() {
                 <p className="mt-2">
                   GitHub&rsquo;s privacy posture around Copilot Chat is better than most, but you still shouldn&rsquo;t
                   send secrets you can avoid sending. Snapmark pixelates the region on the clipboard image
-                  before paste — the unredacted pixels never leave the extension.
+                  before paste — the clear pixels never leave the extension.
                 </p>
               </div>
             </div>

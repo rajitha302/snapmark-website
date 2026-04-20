@@ -55,7 +55,7 @@ check(
     return !/redact/i.test(stripped);
   })(),
 );
-check('how-it-works heading present', /How it works/i.test(html));
+check('how-it-works heading present', /How Snapmark works/i.test(html));
 check('works-with strip present', /Claude Code/.test(html) && /Cursor/.test(html));
 check('keyboard shortcut kbd rendered', /<kbd[^>]*>.*⌘⇧A.*<\/kbd>/.test(html));
 

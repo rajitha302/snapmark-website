@@ -71,9 +71,9 @@ export default function ForClaudeCode() {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[var(--color-fg)]">Redact before it leaves your machine</h3>
+                <h3 className="text-lg font-semibold text-[var(--color-fg)]">Blur it before it leaves your machine</h3>
                 <p className="mt-2">
-                  If the screenshot has an API key, a bearer token, or a customer email, Snapmark&rsquo;s redact tool
+                  If the screenshot has an API key, a bearer token, or a customer email, Snapmark&rsquo;s blur tool
                   pixelates the region on the clipboard image itself. Claude Code sees the sanitised PNG; the
                   original bits never touch the wire.
                 </p>
