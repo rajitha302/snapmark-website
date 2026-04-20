@@ -9,7 +9,7 @@ export default function ProductHuntBadge() {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1207929&theme=light"
+        src="/media/ph-review-badge.svg"
         alt="Snapmark — review on Product Hunt"
         width={250}
         height={54}

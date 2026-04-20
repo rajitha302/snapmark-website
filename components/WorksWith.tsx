@@ -47,10 +47,16 @@ export default function WorksWith() {
           Works with
         </p>
 
-        <div className="logo-marquee mt-8" aria-label="Compatible AI coding agents">
-          <div className="logo-track" role="list">
+        <div
+          className="logo-marquee mt-8"
+          role="group"
+          aria-label="Compatible AI coding agents"
+        >
+          <div className="logo-track">
             <LogoRow />
-            <LogoRow />
+            <div aria-hidden="true" className="contents">
+              <LogoRow />
+            </div>
           </div>
         </div>
 
