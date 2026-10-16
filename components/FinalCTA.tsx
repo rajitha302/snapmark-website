@@ -3,12 +3,14 @@
 import { motion, useReducedMotion } from 'motion/react';
 import { MARKETPLACE_URL, SHORTCUT_MAC } from '@/lib/links';
 
-export default function FinalCTA() {
+// `mark` is the particle logo (ParticleMark), passed in from the page.
+export default function FinalCTA({ mark }: { mark?: React.ReactNode }) {
   const reduced = useReducedMotion();
   return (
     <section id="install" className="relative overflow-hidden">
       <div aria-hidden className="cta-glow pointer-events-none absolute inset-0 -z-10" />
-      <div className="mx-auto max-w-4xl px-6 py-32 text-center">
+      <div className="mx-auto max-w-4xl px-6 pt-16 pb-32 text-center">
+        {mark}
         <h2 className="text-balance text-5xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-7xl">
           Stop describing your screen.{' '}
           <span className="relative inline-block">

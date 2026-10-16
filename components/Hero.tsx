@@ -1,19 +1,29 @@
 'use client';
 
-import { motion, useReducedMotion } from 'motion/react';
+import { motion, useReducedMotion, useSpring } from 'motion/react';
 import { GITHUB_URL, MARKETPLACE_URL, SHORTCUT_MAC } from '@/lib/links';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-// `demo` is the live editor (EditorDemo), passed in from the page so each is
-// its own client boundary.
-export default function Hero({ demo }: { demo: React.ReactNode }) {
+// `demo` is the live editor (EditorDemo) and `backdrop` the WebGL silk
+// (HeroShader), passed in from the page so each is its own client boundary.
+export default function Hero({ demo, backdrop }: { demo: React.ReactNode; backdrop?: React.ReactNode }) {
   const reduced = useReducedMotion();
+  // The demo window leans gently toward the pointer.
+  const rx = useSpring(0, { stiffness: 120, damping: 18 });
+  const ry = useSpring(0, { stiffness: 120, damping: 18 });
+  const lean = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (reduced || e.pointerType !== 'mouse') return;
+    const r = e.currentTarget.getBoundingClientRect();
+    rx.set(-((e.clientY - r.top) / r.height - 0.5) * 5);
+    ry.set(((e.clientX - r.left) / r.width - 0.5) * 7);
+  };
   // Annotations land one after another, like someone marking up the headline.
   const at = (delay: number) => (reduced ? { duration: 0 } : { delay, duration: 0.7, ease });
 
   return (
     <section className="relative overflow-hidden">
+      {backdrop}
       <div aria-hidden className="hero-grid pointer-events-none absolute inset-0 -z-10" />
       <div className="mx-auto max-w-6xl px-6 pt-36 pb-16 text-center sm:pt-44">
         <motion.a
@@ -125,13 +135,18 @@ export default function Hero({ demo }: { demo: React.ReactNode }) {
         className="relative mx-auto max-w-6xl px-4 pb-24 sm:px-6"
       >
         <div aria-hidden className="demo-halo" />
-        <div className="demo-frame">
+        <motion.div
+          className="demo-frame"
+          style={{ rotateX: rx, rotateY: ry, transformPerspective: 1600 }}
+          onPointerMove={lean}
+          onPointerLeave={() => { rx.set(0); ry.set(0); }}
+        >
           <div className="demo-titlebar">
             <span /><span /><span />
             <em>Snapmark — Annotate</em>
           </div>
           {demo}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

@@ -1,6 +1,8 @@
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import EditorDemo from '@/components/EditorDemo';
+import HeroShader from '@/components/HeroShader';
+import ParticleMark from '@/components/ParticleMark';
 import WorksWith from '@/components/WorksWith';
 import HowItWorks from '@/components/HowItWorks';
 import Features from '@/components/Features';
@@ -15,14 +17,14 @@ export default function Home() {
     <>
       <Nav />
       <main>
-        <Hero demo={<EditorDemo />} />
+        <Hero demo={<EditorDemo />} backdrop={<HeroShader />} />
         <WorksWith />
         <HowItWorks />
         <Features />
         <Toolkit />
         <Privacy />
         <PetSection />
-        <FinalCTA />
+        <FinalCTA mark={<ParticleMark />} />
       </main>
       <Footer />
     </>
