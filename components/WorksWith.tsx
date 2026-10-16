@@ -41,11 +41,9 @@ function LogoRow() {
 
 export default function WorksWith() {
   return (
-    <section id="works-with" className="border-b border-[var(--color-border)]">
-      <div className="mx-auto max-w-6xl px-6 pt-6 pb-20 text-center">
-        <p className="text-xs font-medium uppercase tracking-widest text-[var(--color-fg-muted)]">
-          Works with
-        </p>
+    <section id="works-with">
+      <div className="mx-auto max-w-6xl px-6 pt-4 pb-16 text-center">
+        <p className="section-kicker">Paste the result into</p>
 
         <div
           className="logo-marquee mt-8"

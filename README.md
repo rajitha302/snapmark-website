@@ -8,6 +8,7 @@ Marketing site for [Snapmark](https://github.com/rajitha302/Snapmark), the VS Co
 
 - Next.js 15 (App Router) + TypeScript
 - Tailwind CSS 4
+- [Motion](https://motion.dev) for animation (the live editor demo, scroll story and toolkit demos)
 - Static export (`output: 'export'`) → deployed to Netlify as plain HTML/CSS/JS
 - No server, no database, no analytics
 
@@ -39,7 +40,8 @@ npx netlify deploy --prod --dir=out
 ## Structure
 
 - `app/` — routes, root layout, sitemap, robots
-- `components/` — one file per landing-page section
+- `components/` — one file per landing-page section (`EditorDemo` is the animated editor in the hero)
+- `lib/petSprite.ts` — the pixel cat and dog, ported from the extension (`media/editor.js`); keep the two in step
 - `lib/links.ts` — shared URL and shortcut constants
 - `public/` — logo, favicon, future screenshots and OG image
 - `scripts/verify-site.mjs` — post-build smoke check

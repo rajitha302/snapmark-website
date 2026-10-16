@@ -1,8 +1,12 @@
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import HowItWorks from '@/components/HowItWorks';
+import EditorDemo from '@/components/EditorDemo';
 import WorksWith from '@/components/WorksWith';
+import HowItWorks from '@/components/HowItWorks';
+import Features from '@/components/Features';
+import Toolkit from '@/components/Toolkit';
+import Privacy from '@/components/Privacy';
+import PetSection from '@/components/PetSection';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
@@ -11,10 +15,13 @@ export default function Home() {
     <>
       <Nav />
       <main>
-        <Hero />
+        <Hero demo={<EditorDemo />} />
         <WorksWith />
-        <Features />
         <HowItWorks />
+        <Features />
+        <Toolkit />
+        <Privacy />
+        <PetSection />
         <FinalCTA />
       </main>
       <Footer />

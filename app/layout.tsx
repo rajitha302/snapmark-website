@@ -83,7 +83,7 @@ const jsonLd = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   downloadUrl: MARKETPLACE_URL,
   installUrl: MARKETPLACE_URL,
-  softwareVersion: '1.0.0',
+  softwareVersion: '1.0.1',
   url: SITE_URL,
 };
 
@@ -91,13 +91,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/media/hero-poster.webp"
-          type="image/webp"
-          fetchPriority="high"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
